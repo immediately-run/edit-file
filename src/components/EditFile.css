@@ -1,0 +1,33 @@
+.ef {
+  --ef-bg: #16181d; --ef-fg: #e6e6ea; --ef-muted: #9aa0a6;
+  --ef-border: #2c2f34; --ef-hover: #23262b;
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 14px; min-height: 100%; box-sizing: border-box;
+  background: var(--ef-bg); color: var(--ef-fg);
+  font: 13px/1.45 ui-sans-serif, system-ui, sans-serif;
+}
+.ef--empty { color: var(--ef-muted); }
+.ef-hd { display: flex; align-items: baseline; gap: 8px; }
+.ef-title { font-weight: 600; font-size: 14px; }
+.ef-path { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--ef-muted); }
+.ef-area {
+  flex: 1 1 auto; min-height: 180px;
+  resize: vertical;
+  background: #0f1115; color: var(--ef-fg);
+  border: 1px solid var(--ef-border); border-radius: 8px;
+  padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px;
+  line-height: 1.5; outline: none;
+}
+.ef-area:focus { border-color: #5b8def; }
+.ef-area:disabled { opacity: 0.6; }
+.ef-note { margin: 0; font-size: 12px; color: #e0a35e; }
+.ef-foot { display: flex; justify-content: flex-end; gap: 8px; }
+.ef-btn {
+  border: 1px solid var(--ef-border); background: transparent; color: inherit;
+  border-radius: 6px; padding: 5px 14px; cursor: pointer; font: inherit;
+}
+.ef-btn:hover:not(:disabled) { background: var(--ef-hover); }
+.ef-btn:disabled { opacity: 0.5; cursor: default; }
+.ef-save { border-color: #3b82f6; color: #bcd3ff; }
+.ef-save:hover:not(:disabled) { background: rgba(59,130,246,0.12); }
