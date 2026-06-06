@@ -10,9 +10,6 @@
         "task": "edit-file",
         "version": "1.0"
       }
-    ],
-    "resolveFromRegistry": [
-      "@immediately-run/sdk"
     ]
   },
   "scripts": {
