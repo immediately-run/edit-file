@@ -5,7 +5,15 @@
   "type": "module",
   "immediately.run": {
     "requireLatest": "stale_ok",
-    "provides": [{ "task": "edit-file", "version": "1.0" }]
+    "provides": [
+      {
+        "task": "edit-file",
+        "version": "1.0"
+      }
+    ],
+    "resolveFromRegistry": [
+      "@immediately-run/sdk"
+    ]
   },
   "scripts": {
     "dev": "vite",
@@ -14,7 +22,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@immediately-run/sdk": "^0.2.5",
+    "@immediately-run/sdk": "0.2.8",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
