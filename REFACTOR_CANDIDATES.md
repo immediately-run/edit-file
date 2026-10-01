@@ -9,8 +9,9 @@ Recorded by the 2026-06 code-verification pass (R3-124; plan `08-system-apps.md`
 - `EditFile.tsx:1` → `UI_AS_APPS_SPEC §5.7` (Task invocation) / `§8.7`
   (Permissions as file access — scoped mounts). **Both § exist and match** (§5.7
   "Task invocation", §8.7 "Permissions as file access (scoped mounts)").
-- `App.tsx:2,6` → `§5.7/§8.7`; `fs.ts:5` → `§8.7` (a `ro` delegation makes
-  `writeFile` throw `EROFS` host-side). Current.
+- `App.tsx:2,6` → `§5.7/§8.7`; `fs.ts:12` → `§8.7` (a `ro` delegation makes
+  `writeFile` throw `EROFS` host-side). Re-verified 2026-10-01 (the fs.ts header
+  rewrite moved the citation off line 5). Current.
 
 The app receives a chrooted single-file cap (`/task/<slot>/file/<name>`) and uses
 `useTaskInput`/`completeTask`/`cancelTask` — the Done-spec ↔ code mapping checks
