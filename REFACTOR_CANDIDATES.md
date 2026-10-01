@@ -17,10 +17,15 @@ The app receives a chrooted single-file cap (`/task/<slot>/file/<name>`) and use
 out. Mapping is trivial enough to live in inline comments; no separate
 CODE_SPEC_REFERENCES.md needed.
 
-## SDK-version skew (record only)
+## SDK-version skew (resolved 2026-10-01)
 
-Pins `@immediately-run/sdk` at **`0.2.8`** (oldest fleet tier: `0.2.8` / `0.8.1` /
-`0.11.0` / `^0.12.0`). Coordinated bump owed; do not bump here.
+~~Pins `@immediately-run/sdk` at **`0.2.8`** … Coordinated bump owed; do not bump here.~~
+Resolved by the R3-447 fix (#10): the pin is **`0.75.0`** (exact, per the fleet's
+post-2026-08 convention that each app pins its own current SDK — ways_of_working §6;
+the June "coordinated bump" concern is obsolete: the listed tiers `0.2.8`/`0.8.1`/
+`0.11.0`/`^0.12.0` predate it, and the entry was already stale at `^0.13.0`). The bump
+was FORCED, not discretionary: `^0.13.0` predates the SDK's `/fs` subpath the fs
+accessor now delegates to.
 
 ## Vocabulary (Phase 2)
 
